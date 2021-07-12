@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+      *{
+          box-sizing: border-box;
+      }
+      .res{
+        display: flex;
+    justify-content: center;
+      }
+      #reset{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    cursor: pointer;
+      }
+      #reset:hover{
+          background-color: rgb(147, 25, 168);
+      }
+      body{
+       background:linear-gradient(to right,#673ab7,#9e9e9e)
+      }
+      h2{
+        font-family: 'Poppins', sans-serif;
+        color:aliceblue;
+      }
+      .greet{
+          display: flex;
+          font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+          justify-content: center;
+      }
+      .greet>h1{
+          color:white;
+      }
+
+     .image-cont{
+        display: flex;
+        justify-content: center;
+        
+     }
+     .screens{
+        display: flex;
+    justify-content: space-around;
+     }
+     .full-cont>h2{
+        margin: 0rem 54rem;
+     }
+     .result{
+        display: flex;
+    justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+        color:aliceblue;
+      
+     }
+     .score{
+        display: flex;
+    justify-content: space-around;
+        font-family: 'Poppins', sans-serif;
+        color:aliceblue;
+      
+     }
+  </style>
+
+    <title>Rock_paper_scissor</title>
+    <script type="text/javascript" src="rock-paper-scissor.js"></script>
+    <link rel="shortcut icon" href="paper.jpg" />
+</head>
+<body>
+    <div class="greet">
+        <h1>Welcome to Rock Paper Scissor</h1>
+    </div>
+    <div class="screens">
+    <div>
+        <h2>Player Output</h2>
+        <img id="display">
+    </div>
+    <div class="computer">
+        <h2>Computer Output</h2>
+        <img id="comp">
+    </div>
+</div>
+   <div class="full-cont">
+       
+       <div class="image-cont">
+    <div class="cont">
+        <img src="hand.png" class="img" onclick="rock_hand(); random(); result()"/>
+    </div>
+    <div class="cont">
+        <img src="hand2.png"  class="img" onclick="paper_hand(); random();result()"/>
+    </div>
+    <div class="cont">
+        <img src="hand3.png"  class="img" onclick="scissor_hand(); random(); result()"/>
+    </div>
+</div>
+</div>
+<div class="result">
+<h1 id="score">Player Score</h1>
+<h1 id="score">Computer Score</h1>
+</div>
+<div class="score">
+<h1 id="player-sco">0</h1>
+<h1 id="comp-sco">0</h1>
+
+</div>
+<div class="res">
+<button id="reset" onclick="window.location.reload();">Reset</button>
+</div>
+
+</body>
+
+</html>
